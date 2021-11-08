@@ -13,7 +13,11 @@ import java.util.Optional;
 //result.get() <- 이러한 방식 보다는 result.orElseGet() <- 값이 있으면 꺼내고 없으면 메소드를 실행해 default 값을 꺼내 라는 식으로 설계한다
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
