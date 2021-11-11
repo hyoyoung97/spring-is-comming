@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * command + option + V -> 리턴형과 변수 자동 입력
  * control + T -> 리팩토링 관련 -> method
  * command + shift + T -> 테스트 클래스 자동완성
+ * command + B -> 들어가기
  */
 @Controller
 public class HelloController {
@@ -65,9 +66,6 @@ public class HelloController {
         }
     }
 
-    @GetMapping("home")
-    public String home() {
-        return "home";
-    }
+
 
 }
